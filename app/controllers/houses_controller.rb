@@ -12,6 +12,14 @@ class HousesController < ApplicationController
   def show
   end
 
+  def hello
+    @hello = "hello"
+  end
+  
+  def goodbye
+    @goodbye = "goodbye"
+  end
+
   # GET /houses/new
   def new
     @house = House.new
