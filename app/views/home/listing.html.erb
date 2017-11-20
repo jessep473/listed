@@ -1,21 +1,38 @@
 <p id="notice"><%= notice %></p>
+<div class="col-md-12" style="border-bottom: 3px solid rgba(36, 133, 222, 1)">
+<h4 style="font-weight: 300; float: left; margin-left: 5%">Available Listing</h1>
+</div>
 
-<h1>Houses Listing</h1>
 
 
  
     <% @houses.each do |house| %>
-      <div class="col-md-4">
-        <p><%= house.title %></p>
-        <p><%= house.address %></p>
-        <p><%= house.price %></p>
-        <p><%= house.available %></p>
-        <p><%= house.description %></p>
-        <img><%= image_tag house.picture_url, :size => '300x200' if house.picture.present? %></p>
-        <p><%= link_to 'Show', house %></p>
-        <p><%= link_to 'Edit', edit_house_path(house) %></p>
-        <p><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    
+    
+      <div class="card col-md-4" style="min-width: 370px; padding-bottom: 10px">
+     
+        <p style="font-size: 20px; font-weight: 500; width: 100%"><%= house.title %></p>
+       
+        <p style="font-size: 17px; font-weight: 300; margin-top: -10px"><%= house.address %></p>
+       
+      <center>
+        <img><%= image_tag house.picture_url, :size => '340x200' if house.picture.present? %></p>
+    
+        <div class="card" style="width: 340px; height: 40px; background: rgba(36, 133, 222, 1); color: white">
+
+        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px"><%= house.price %></p>
+     
         </div>
+        <div class="card" style="width: 340px; height: 40px; background: rgba(36, 133, 222, 1); color: white">
+        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: white"><%= link_to 'View', house, {:style=>'color:#FFFFFF;', :class => "css_class"} %></p>
+        </div>
+        </center>
+      
+     
+       
+        </div>
+       
+   
     <% end %>
 
 
@@ -24,57 +41,7 @@
 
 <br>
 
-<%= link_to 'New House', new_house_path %>
 
-<div class="section section-tabs">
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="title">
-        <h3>Tabs with Icons on Card</h3>
-      </div>
 
-      <!-- Tabs with icons on Card -->
-      <div class="card card-nav-tabs">
-        <div class="header header-success">
-          <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-          <div class="nav-tabs-navigation">
-            <div class="nav-tabs-wrapper">
-              <ul class="nav nav-tabs" data-tabs="tabs">
-                <li class="active">
-                  <a href="#profile" data-toggle="tab">
-                    <i class="material-icons">face</i>
-                    Profile
-                  </a>
-                </li>
-                <li>
-                  <a href="#messages" data-toggle="tab">
-                    <i class="material-icons">chat</i>
-                    Messages
-                  </a>
-                </li>
-                <li>
-                  <a href="#settings" data-toggle="tab">
-                    <i class="material-icons">build</i>
-                    Settings
-                  </a>
 
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="content">
-          <div class="tab-content text-center">
-            <div class="tab-pane active" id="profile">
-              <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p>
-            </div>
-            <div class="tab-pane" id="messages">
-              <p> I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.</p>
-            </div>
-            <div class="tab-pane" id="settings">
-              <p>I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it’s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+             
