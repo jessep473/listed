@@ -34,7 +34,7 @@ class HousesController < ApplicationController
   # POST /houses
   # POST /houses.json
   def create
-    @house = House.new(house_params)
+    @house = House.new(house_params.merge({ user_id: current_user.id }))
 
     respond_to do |format|
       if @house.save

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root to: 'users#show'
+  root to: redirect('/houses')
   resources :houses
 
   resources :users do
