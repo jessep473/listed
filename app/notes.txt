@@ -1,0 +1,1 @@
+        <img><%= image_tag house.picture_url, :size => '340x200' if house.picture.present? %></p>
