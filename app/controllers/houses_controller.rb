@@ -15,6 +15,8 @@ class HousesController < ApplicationController
   def hello
     @hello = "hello"
   end
+
+  
   
   def goodbye
     @goodbye = "goodbye"

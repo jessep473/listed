@@ -3,3 +3,5 @@ class HomeController < ApplicationController
     @houses = House.all
   end
 end
+
+
