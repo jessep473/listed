@@ -16,6 +16,7 @@
         <p style="font-size: 20px; font-weight: 500; width: 100%"><%= house.title %></p>
        
         <p style="font-size: 17px; font-weight: 300; margin-top: -10px"><%= house.address %></p>
+        <img><%= image_tag house.picture_url, :size => '340x200' if house.picture.present? %></p>
        
       <center>    
         <div class="card" style="width: 340px; height: 40px; background: rgba(36, 133, 222, 1); color: white">
