@@ -11,7 +11,8 @@ gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'carrierwave'
-gem 'mini_magick', '3.8.0'
+gem 'mini_magick', '3.6.0'
+gem 'net-ssh' # needed for carrierwave
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
