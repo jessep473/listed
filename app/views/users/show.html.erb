@@ -1,5 +1,48 @@
-<button>new house</button>
 
-<% @houses.each do |house| %>
-    <p><%= house.id %></p>
-<% end %>
+
+<p id="notice"><%= notice %></p>
+<div class="col-md-12" style="border-bottom: 3px solid rgba(36, 133, 222, 1)">
+<h4 style="font-weight: 300; float: left; margin-left: 5%">Available Listing</h1>
+</div>
+
+
+
+ 
+    <% @houses.each do |house| %>
+    
+    
+      <div class="card col-md-4" style="min-width: 370px; padding-bottom: 10px; padding-top: 10px">
+     
+        <p style="font-size: 20px; font-weight: 500; width: 100%"><%= house.title %></p>
+       
+        <p style="font-size: 17px; font-weight: 300; margin-top: -10px"><%= house.address %></p>
+        <img><%= image_tag house.picture_url, :size => '340x200' if house.picture.present? %></p>
+       
+      <center>    
+        <div class="card" style="width: 340px; height: 40px; background: rgba(36, 133, 222, 1); color: white">
+
+        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px"><%= house.price %></p>
+     
+        </div>
+        <div class="card" style="width: 340px; height: 40px; background: rgba(36, 133, 222, 1); color: white">
+        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: white"><%= link_to 'View', house, {:style=>'color:#FFFFFF;', :class => "css_class"} %></p>
+        </div>
+        </center>
+      
+     
+       
+        </div>
+       
+   
+    <% end %>
+
+
+ 
+
+
+<br>
+
+
+
+
+           
