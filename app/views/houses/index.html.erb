@@ -1,8 +1,8 @@
 
 
 <p id="notice"><%= notice %></p>
-<div class="col-md-12" style="border-bottom: 3px solid rgba(36, 133, 222, 1)">
-<h4 style="font-weight: 300; float: left; margin-left: 5%">Available Listing</h1>
+<div class="col-md-12" style="border-bottom: 1px solid #2d2c3e">
+<h4 style="font-weight: 300; float: left; margin-left: 5%">Available Listings</h1>
 </div>
 
 
@@ -11,7 +11,7 @@
     <% @houses.each do |house| %>
     
     
-      <div class="card col-md-4" style="min-width: 370px; padding-bottom: 10px; padding-top: 10px">
+      <div class="card col-md-4" style="min-width: 370px; padding-bottom: 10px; padding-top: 10px; border: 0.1px solid white">
      
         <p style="font-size: 20px; font-weight: 500; width: 100%"><%= house.title %></p>
        
@@ -19,13 +19,14 @@
         <img><%= image_tag house.picture_url, :size => '340x200' if house.picture.present? %></p>
        
       <center>    
-        <div class="card" style="width: 340px; height: 40px; background: rgba(36, 133, 222, 1); color: white">
+        <div class="card" style="width: 340px; height: 40px; background: ##2d2c3e; color: white">
 
-        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px"><%= house.price %></p>
+        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: #2d2c3e"><%= house.price %></p>
      
         </div>
-        <div class="card" style="width: 340px; height: 40px; background: rgba(36, 133, 222, 1); color: white">
-        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: white"><%= link_to 'View', house, {:style=>'color:#FFFFFF;', :class => "css_class"} %></p>
+        <div class="card" style="width: 340px; height: 40px; background: #ffffff; color: white">
+        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: #2d2c3e
+        "><%= link_to 'View', house, {:style=>'color: #2d2c3e;', :class => "css_class"} %></p>
         </div>
         </center>
       
