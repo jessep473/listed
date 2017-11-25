@@ -1,8 +1,10 @@
 
 
 <p id="notice"><%= notice %></p>
-<div class="col-md-12" style="border-bottom: 1px solid #2d2c3e">
-<h4 style="font-weight: 300; float: left; margin-left: 5%">Available Listings</h1>
+<div class="col-md-12" style="border-bottom: 1px solid #0b0f14">
+<center>
+<h4 style="font-weight: 300; color: #3b3e42; float: left; margin-left: 5%">Available Listings</h1>
+</center>
 </div>
 
 
@@ -13,20 +15,20 @@
     
       <div class="card col-md-4" style="min-width: 370px; padding-bottom: 10px; padding-top: 10px; border: 0.1px solid white">
      
-        <p style="font-size: 20px; font-weight: 500; width: 100%"><%= house.title %></p>
+        <p style="font-size: 20px; font-weight: 500; width: 100%; color: #3b3e42"><%= house.title %></p>
        
-        <p style="font-size: 17px; font-weight: 300; margin-top: -10px"><%= house.address %></p>
+        <p style="font-size: 17px; font-weight: 300; margin-top: -10px; color: #3b3e42"><%= house.address %></p>
         <img><%= image_tag house.picture_url, :size => '340x200' if house.picture.present? %></p>
        
       <center>    
-        <div class="card" style="width: 340px; height: 40px; background: ##2d2c3e; color: white">
+        <div class="card" style="width: 340px; height: 40px; background: #3b3e42; color: white">
 
-        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: #2d2c3e"><%= house.price %></p>
+        <p style="font-size: 17px; font-weight: 400; height: 40px; color: #ffffff; padding: 8px"><%= house.price %></p>
      
         </div>
-        <div class="card" style="width: 340px; height: 40px; background: #ffffff; color: white">
+        <div class="card" style="width: 340px; height: 40px; background: #3b3e42; color: white">
         <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: #2d2c3e
-        "><%= link_to 'View', house, {:style=>'color: #2d2c3e;', :class => "css_class"} %></p>
+        "><%= link_to 'View', house, {:style=>'color: #ffffff;', :class => "css_class"} %></p>
         </div>
         </center>
       

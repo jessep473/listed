@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Two</title>
+    <title>UpListed</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
@@ -10,28 +10,40 @@
   </head>
 
   <body style="background: #ffffff">
-  <nav class="navbar navbar-default navbar-fixed-top" style="background: #ffffff; border-bottom: 2px solid #2d2c3e" role="navigation">
-  <a class="navbar-brand" style="color: #2d2c3e; font-size: 25px; font-weight: 500; margin-left: 25px; margin-top: 10px" href="/">Uplisted.com</a>
-  
+  <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" style="background: #cc1c12">
+   <a class="navbar-brand" style="color: white; font-size: 23px; font-weight: 500; margin-left: 25px; margin-top: 10px" href="/">Uplisted.com</a>
+  <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        
+      </div>
 
-    <p class="navbar-text pull-right" style="color: #2d2c3e">
-    <% if user_signed_in? %>
-    <%= link_to "Home", home_listing_path, :class => 'navbar-link'  %>
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>
-    </p>
-  
-   
-    <div class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse" id="navigation-example" style="float: right; font-weight: 500; font-size: 15px; padding: 5px">
+      <% if user_signed_in? %>
+
       
+        
+      <%= link_to "Home", home_listing_path, :class => 'navbar-link'  %>
       
-    </div>
+        &nbsp
+        |
+        &nbsp
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+
+      <% end %>
+      </div>
   </div>
 </nav>
+  
 
 
 
@@ -44,16 +56,7 @@
 <% end %>
   <%= yield %>
 </div>
-<p class="navbar-text pull-right" style="color: white">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-</p>
+
 <footer>
 
 </footer>
