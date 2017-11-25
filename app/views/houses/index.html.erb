@@ -1,10 +1,12 @@
 
 
 <p id="notice"><%= notice %></p>
-<div class="col-md-12" style="border-bottom: 2px solid #0b0f14; width: 96%">
-<center>
-<h4 style="font-weight: 300; color: #3b3e42; float: left; margin-left: 5%">Available Listings</h1>
-</center>
+<div class="col-md-12" style="border-bottom: 2px solid #0b0f14">
+
+<div class="col-md-4" style="margin-left: 2%">
+<h4 style="font-weight: 400; color: #3b3e42; font-size: 30px">Available Listings<span style="color: red">.</span></h4>
+</div>
+
 </div>
 
 
@@ -13,7 +15,7 @@
     <% @houses.each do |house| %>
     
     
-      <div class="card col-md-4" style="min-width: 370px; padding-bottom: 10px; padding-top: 10px; margin: 1%; width: 30%;">
+      <div class="card col-md-4" style="min-width: 370px; padding: 10px;">
      
         <p style="font-size: 20px; font-weight: 500; width: 100%; color: #3b3e42"><%= house.title %></p>
        

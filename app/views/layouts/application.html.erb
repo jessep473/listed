@@ -11,7 +11,7 @@
 
   <body style="background: #f1f5f2">
   <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" style="background: #cc1c12; height: 35px">
-   <a class="navbar-brand" style="color: white; font-size: 20px; font-weight: 500; margin-left: 25px; margin-top: 3px" href="/">Uplisted.com</a>
+   <a class="navbar-brand" style="color: white; font-size: 20px; font-weight: 500; margin-left: 25px; margin-top: 3px" href="/">UpRented</a>
   <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -36,6 +36,7 @@
         &nbsp
         <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
       <% else %>
+      
         <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 
