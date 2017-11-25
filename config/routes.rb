@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :customizes
   get 'home/listing'
 
   root to: redirect('/houses')

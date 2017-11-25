@@ -1,0 +1,32 @@
+<%= form_with(model: customize, local: true) do |form| %>
+  <% if customize.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customize.errors.count, "error") %> prohibited this customize from being saved:</h2>
+
+      <ul>
+      <% customize.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :customize_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :slogan %>
+    <%= form.text_field :slogan, id: :customize_slogan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :customize_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

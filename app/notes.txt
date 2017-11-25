@@ -1,0 +1,2 @@
+<%= link_to 'View', house, {:style=>'color:#FFFFFF;', :class => "css_class"} %></p>
+<%= link_to 'Back', home_listing_path %>

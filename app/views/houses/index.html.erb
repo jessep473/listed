@@ -1,7 +1,7 @@
 
 
 <p id="notice"><%= notice %></p>
-<div class="col-md-12" style="border-bottom: 1px solid #0b0f14">
+<div class="col-md-12" style="border-bottom: 2px solid #0b0f14; width: 96%">
 <center>
 <h4 style="font-weight: 300; color: #3b3e42; float: left; margin-left: 5%">Available Listings</h1>
 </center>
@@ -9,26 +9,28 @@
 
 
 
- 
+<center>
     <% @houses.each do |house| %>
     
     
-      <div class="card col-md-4" style="min-width: 370px; padding-bottom: 10px; padding-top: 10px; border: 0.1px solid white">
+      <div class="card col-md-4" style="min-width: 370px; padding-bottom: 10px; padding-top: 10px; margin: 1%; width: 30%;">
      
         <p style="font-size: 20px; font-weight: 500; width: 100%; color: #3b3e42"><%= house.title %></p>
        
-        <p style="font-size: 17px; font-weight: 300; margin-top: -10px; color: #3b3e42"><%= house.address %></p>
-        <img><%= image_tag house.picture_url, :size => '340x200' if house.picture.present? %></p>
+        <p style="font-size: 17px; font-weight: 300; margin-top: -10px; color: grey"><%= house.address %></p>
+        <img><%= image_tag house.picture_url, :size => '340x200' if house.picture.present? %></img>
+        <center>  
        
-      <center>    
+   
+       
         <div class="card" style="width: 340px; height: 40px; background: #3b3e42; color: white">
 
-        <p style="font-size: 17px; font-weight: 400; height: 40px; color: #ffffff; padding: 8px"><%= house.price %></p>
+        <p style="font-size: 17px; font-weight: 400; height: 40px; color: white; padding: 8px"><%= house.price %></p>
      
         </div>
         <div class="card" style="width: 340px; height: 40px; background: #3b3e42; color: white">
-        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: #2d2c3e
-        "><%= link_to 'View', house, {:style=>'color: #ffffff;', :class => "css_class"} %></p>
+        <p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: white; padding: 9px
+        "><%= link_to 'View', house, {:style=>'color: white', :class => "css_class"} %></p>
         </div>
         </center>
       
@@ -36,7 +38,7 @@
        
         </div>
        
-   
+   </center>
     <% end %>
 
 

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @customize.title %>
+</p>
+
+<p>
+  <strong>Slogan:</strong>
+  <%= @customize.slogan %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @customize.description %>
+</p>
+
+<%= link_to 'Edit', edit_customize_path(@customize) %> |
+<%= link_to 'Back', customizes_path %>
