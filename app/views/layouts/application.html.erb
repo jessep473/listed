@@ -9,22 +9,17 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body style="background: #f1f5f2">
-  <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" style=" background: #232526; /* fallback for old browsers */
+  <body style="background: #00d2ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ">
+  <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" style="background: #232526; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #232526, #414345); height: 35px">
-   <a class="navbar-brand" style="color: white; font-size: 20px; font-weight: 500; margin-left: 25px; margin-top: 3px" href="/">UpRented</a>
+  background: linear-gradient(to right, #232526, #414345); height: 45px">
+   <a class="navbar-brand" style="color: white; font-size: 20px; font-weight: 500; margin-left: 25px; margin: 15px" href="/">UpRented</a>
   <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        
-      </div>
+
 
       <div class="collapse navbar-collapse" id="navigation-example" style="float: right; font-weight: 500; font-size: 15px; margin-bottom: 5px">
       <% if user_signed_in? %>
