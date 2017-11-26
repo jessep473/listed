@@ -20,6 +20,9 @@
 body {
   background-color: #CCCCCC;
 }
+
+
+
 body.inverse {
   background: #333333;
 }

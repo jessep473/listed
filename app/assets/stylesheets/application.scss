@@ -1,11 +1,14 @@
 
 @import 'materialize';
 
-body { padding-top: 20px; }
-footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 a {color: black}
+body {margin: 5%; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
+
+	
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

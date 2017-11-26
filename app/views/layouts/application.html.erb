@@ -10,7 +10,9 @@
   </head>
 
   <body style="background: #f1f5f2">
-  <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" style="background: #cc1c12; height: 35px">
+  <nav class="navbar navbar-transparent navbar-fixed-top navbar-color-on-scroll" style=" background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #232526, #414345); height: 35px">
    <a class="navbar-brand" style="color: white; font-size: 20px; font-weight: 500; margin-left: 25px; margin-top: 3px" href="/">UpRented</a>
   <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -44,11 +46,15 @@
       </div>
   </div>
 </nav>
+
+
+
+
   
 
 
 
-  <div  style="margin: 5%; text-align: center">
+  <div  style="text-align: center">
   <% if notice %>
   <p style="color: white" class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -65,3 +71,4 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.js"></script>
   </body>
 </html>
+

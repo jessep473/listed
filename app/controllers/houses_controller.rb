@@ -7,6 +7,10 @@ class HousesController < ApplicationController
     @houses = House.where(user_id: params[:user_id])
   end
 
+  def home
+    
+  end
+
   # GET /houses/1
   # GET /houses/1.json
   def show

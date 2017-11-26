@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'pages/start'
+
   resources :customizes
   get 'home/listing'
+  get 'houses/home'
 
-  root to: redirect('/houses')
+  root to: redirect('/pages/start')
 
   devise_for :users
   root to: redirect('/home/listing')
