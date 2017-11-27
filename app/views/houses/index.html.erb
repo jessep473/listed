@@ -1,6 +1,7 @@
 
 
 <p id="notice"><%= notice %></p>
+<div style="margin-right: -8%">
 <div class="col-md-12" style="border-bottom: 0px solid white">
 
 <div class="col-md-4" style="margin-left: 2%">
@@ -9,13 +10,13 @@
 
 </div>
 
-
-
 <center>
+<div style="margin-right: 3%">
+
     <% @houses.each do |house| %>
     
     
-      <div class="card col-md-4" style="width: 32%; min-width: 370px; padding: 10px; margin: .3%; border-radius: 2px">
+      <div class="card col-md-2" style="min-width: 370px; padding: 10px; margin: .3%; border-radius: 2px; text-align: center">
      
         <p style="font-size: 20px; font-weight: 500; width: 100%; color: #3b3e42"><%= house.title %></p>
        
@@ -40,11 +41,11 @@
        
         </div>
        
-   </center>
+   
     <% end %>
-
-
- 
+</div>
+</center>
+    </div>
 
 
 <br>
