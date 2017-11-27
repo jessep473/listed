@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="col-md-12 card" style="padding: 5%; padding-top: 2%">
 <h3>Your Dashboard</h1>
 
 <table>
@@ -35,10 +35,14 @@
 <p style="font-size: 20px">Copy and Paste<span style="font-size: 20px; color: blue"> http://localhost:3000/users/<%=@current_user.id-%>/houses</span> To your website.</p>
 
 
+<div class="col-md-12 card" style="height: 50px; background: #232526; /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #232526, #414345); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #232526, #414345)"?
+<h2>
+<%= link_to 'New House', new_house_path, {:style=>'color: white; font-size: 30px;font-weight: 300', :class => "css_class"} %>
+</h2>
 
-<h5>
-<%= link_to 'New House', new_house_path %>
-</h5>
-
+</div>
+</div>
 
              
