@@ -1,3 +1,4 @@
+<div class="col-md-10 col-md-offset-1" style="background: white; padding: 5%">
 <%= form_with(model: house, local: true) do |form| %>
   <% if house.errors.any? %>
     <div id="error_explanation">
@@ -11,36 +12,41 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :house_title %>
+  <div class="field" style="color: black">
+    <%= form.label :title, class: 'titleup' %>
+    <%= form.text_field :title, id: :house_title, class: 'inputup' %>
   </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :house_address %>
+  <div class="field" style="color: black">
+    <%= form.label :address, class: 'titleup' %>
+    <%= form.text_field :address, id: :house_address, class: 'inputup' %>
   </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price, id: :house_price %>
+  <div class="field" style="color: black">
+    <%= form.label :price, class: 'titleup' %>
+    <%= form.text_field :price, id: :house_price, class: 'inputup' %>
   </div>
 
-  <div class="field">
-    <%= form.label :available %>
-    <%= form.text_field :available, id: :house_available %>
+  <div class="field" style="color: black">
+    <%= form.label :available, class: 'titleup' %>
+    <%= form.text_field :available, id: :house_available, class: 'inputup' %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :house_description %>
+  <div class="field" style="color: black">
+    <%= form.label :description, class: 'titleup' %>
+    <%= form.text_field :description, id: :house_description, class: 'inputup' %>
   </div> 
 
-  <div class="field">
+  <div class="field" style="color: black">
     <%= form.file_field :picture, id: :house_picture %>
   </div>
 
-  <div class="actions">
+  <div class="actions" style="width: 100%; height: 40px; background: #3b3e42; color: white">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
+<div class="card" style="width: 100%; height: 40px; background: #3b3e42; color: white">
+<p style="font-size: 17px; font-weight: 400; height: 30px; margin-top: 15px; color: white; padding: 9px
+"><%= link_to 'View', house, {:style=>'color: white', :class => "css_class"} %></p>
+</div>
